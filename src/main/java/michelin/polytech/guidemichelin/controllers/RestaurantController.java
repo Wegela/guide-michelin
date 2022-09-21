@@ -32,6 +32,11 @@ public class RestaurantController {
         return RestaurantDto.fromEntity(this.restaurantService.addRestaurant(resto.getName(), resto.getAddress()));
     }
 
+    @PutMapping("/restaurants")
+    public RestaurantDto putRestaurant(@Valid @RequestBody RestaurantDto resto){
+        return RestaurantDto.fromEntity(this.restaurantService.updateRestaurant(resto.getId(), resto.getName(), resto.getAddress()));
+    }
+
     @DeleteMapping("/restaurants/{id}")
     public void deleteRestaurant(@PathVariable int id){
         this.restaurantService.deleteRestaurant(id);
