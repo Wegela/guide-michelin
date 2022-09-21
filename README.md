@@ -18,8 +18,8 @@ JSON
 	"address" : "{address}",
 }
 
-Modifier un livre
-
+PUT
+Moidifier un livre
 {
 	"id" : "{id}"
 	"name" : "{name}",
